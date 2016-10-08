@@ -1,15 +1,20 @@
 <!DOCTYPE html>
-<html ng-app="myModule">
+<html ng-app="chartApp">
 <head>
     <meta charset="utf-8" />
     <title> Highharts directive demo </title>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
-    <script type="text/javascript" src="/javascripts/chart.js"></script>
+
 </head>
 <body ng-controller="chartController">
 
 <hc-chart options="chartOptions">Placeholder for generic chart</hc-chart>
 <hc-pie-chart title="Browser usage" data="pieData">Placeholder for pie chart</hc-pie-chart>
+
+<script type="text/javascript" src="/javascripts/app.js"></script>
+<script type="text/javascript" src="/javascripts/chart-service.js"></script>
+<script type="text/javascript" src="/javascripts/chart-controller.js"></script>
+<script type="text/javascript" src="/javascripts/chart-directive.js"></script>
 </body>
 </html>
