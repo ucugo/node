@@ -16,5 +16,9 @@ gulp.task('serve', [], function () {
     return nodemon(options)
         .on('restart', function () {
             console.log('Restarting....');
+        })
+        .on('craash', function () {
+            console.error('Application crashed....')
+            console.log('Restarting....');
         });
 });
