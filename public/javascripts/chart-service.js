@@ -1,8 +1,17 @@
 'use strict';
 
 angular.module('chartApp')
-    .factory("chartService", [function($http){
-
-    this.name = 'hello';
-    return 'hello'
-}])
+    .service("chartService", function($http){
+        this.getData = function(callbackFunc) {
+            $http({
+                method: 'GET',
+                url: '/iPlayer'
+            })
+                .success(function(data){
+                    callbackFunc(data)
+                })
+                .error(function(error){
+                    alert(error)
+                })
+        }
+})
